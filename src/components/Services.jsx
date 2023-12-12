@@ -8,8 +8,27 @@ import Logo6 from '../assets/Logo6.png'
 import Logo7 from '../assets/Logo7.png'
 
 const Services= () =>{
+    const Services = [
+        {
+            id: 1, title: "Membership Organisation", 
+            description: "Our Membership management software provides full automation of membership renewals and payments",
+            image: "/src/assets/Icon1.png"
+        },
+
+        {
+            id: 2, title: "National Association", 
+            description: "Our Membership management software provides full automation of membership renewals and payments",
+            image: "/src/assets/Icon2.png"
+        },
+
+        {
+            id: 3, title: "Clubs And Groups", 
+            description: "Our Membership management software provides full automation of membership renewals and payments",
+            image: "/src/assets/Icon3.png"
+        }
+    ]
   return (
-    <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto'>
+    <div className='md:px-14 px-4 py-16 max-w-screen-2xl mx-auto' id='service'>
         <div className='text-center my-8'>
             <h2 className='text-4xl text-neutralDgrey font-semibold mb-2'>Our Clients</h2>
             <p className='text-neutralGrey'>We have been working with some fortune 500+ clients</p>
@@ -33,7 +52,20 @@ const Services= () =>{
                 who is DevNex Suitable for?
             </p>
         </div>
-        
+
+        {/* cards */}
+        <div className='mt-14 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:w-11/12 mx-auto gap-12'>
+            {
+                Services.map(service => <div key = {service.id} className='px-4 py-8 text-center md:w-[300px] mx-auto md:h-80 rounded-md shadow cursor-pointer
+                hover:-translate-y-5 hover:border-b-4 hover:border-indigo-700 transition-all duration-300 flex items-center justify-center h-full'>
+                    <div>
+                        <div className='bg-[#E8F5E9] mb-4 h-14 w-14 mx-auto rounded-tl-3xl rounded-br-3xl'><img src={service.image} alt="" /></div>
+                        <h4 className='text-2xl font-bold text-neutralDgrey mb-2 px-2'>{service.title}</h4>
+                        <p className='text-sm text-neutralGrey'>{service.description}</p>
+                    </div>
+                </div>)
+            }
+        </div>
     </div>
   )
 }
