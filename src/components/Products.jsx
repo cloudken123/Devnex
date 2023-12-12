@@ -1,9 +1,4 @@
 import React from "react";
-import about from "../assets/Frame00.png";
-import Ico from "../assets/Ico.png";
-import ico1 from "../assets/ico1.png";
-import Ico2 from "../assets/Ico2.png";
-import Vector from "../assets/Vector.png";
 import locked from "../assets/locked.png";
 import image99 from "../assets/image99.png";
 function Products() {
